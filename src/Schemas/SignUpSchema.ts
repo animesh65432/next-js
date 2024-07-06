@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const SignUpSchemas = z.object({
+export const SignUpSchemas = z.object({
   name: z
     .string()
     .min(4, { message: "Username must be at least 4 characters long" })
@@ -10,6 +10,5 @@ const SignUpSchemas = z.object({
     }),
 
   Email: z.string().email({ message: "Email is required" }),
-
   Password: z.string().min(8, { message: "password sholud be greater than 8" }),
 });

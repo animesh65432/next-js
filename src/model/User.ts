@@ -2,7 +2,7 @@ import mongoose, { Document, Schema } from "mongoose";
 import { MessagesTypes, MessageSchema } from "./Message";
 
 interface UserTypes extends Document {
-  name: string;
+  username: string;
   Email: string;
   Password: string;
   verifycode: string;
@@ -13,7 +13,7 @@ interface UserTypes extends Document {
 }
 
 const UsersSchema: Schema<UserTypes> = new Schema({
-  name: {
+  username: {
     type: String,
     required: [true, "Username is required"],
     unique: true,

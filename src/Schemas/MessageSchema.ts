@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const SigninSchemas = z.object({
+export const MessageSchemas = z.object({
   content: z
     .string()
     .min(10, { message: "content must be 10 char" })
